@@ -1,0 +1,35 @@
+{{ $related := .Site.RegularPages.Related . | first 1 }}
+
+{{ if gt (len $related) 0 }}
+<div class="read-more">
+    {{ with $related }}
+        {{ range . }}
+            <div class="read-more-header">
+                <a href="{{ .RelPermalink }}" class="read-more-btn">Read More</a>
+            </div>
+            <div class="read-more-content">
+                <h3><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h3>
+                {{ .Content | safeHTML | truncate 140 }}
+                <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}" rel="bookmark" title="{{ .Title }}" itemprop="url">Continue reading</a>
+            </div>
+        {{ end }}
+    {{ end }}
+
+    {{ $related := .Site.RegularPages.Related . }}
+    {{ if gt (len $related) 3 }}
+        {{ $related := $related | after 1 | first 2}}
+        {{ with $related }}
+            <div class="read-more-list">
+                {{ range . }}
+                <div class="list-item">
+                    <h4><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h4>
+                    {{ if gt .Date 0001 }} <!-- If Date is set (greater than year 0001) -->
+                        <span class="entry-date date published updated"><time datetime="{{ .Date }}">Published on {{ .Date.Format "January 2, 2006" }}</time></span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}

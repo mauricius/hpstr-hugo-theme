@@ -6,7 +6,7 @@ codekit-config.json
 node_modules
 Gemfile.lock
 .sass-cache
-.jekyll-metadata
+static/dist/*
 
 # Created by https://www.gitignore.io/api/linux,vim
 

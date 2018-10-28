@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 Michael Rose (c) 2016 Durand D'souza
+Copyright (c) 2014 Michael Rose (c) 2016 Durand D'souza (c) 2018 Maurizio Bonani
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

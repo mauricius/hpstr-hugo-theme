@@ -1,0 +1,18 @@
+.logo-header {
+  position: relative;
+  .blog-logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -110px;
+    right: 50%;
+    margin-right: -60px;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 99;
+    text-indent: -9999px;
+    border: 3px solid #fff;
+    background-color: #fff;
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+  }
+}

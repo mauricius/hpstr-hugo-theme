@@ -8,7 +8,7 @@ This is a port of the [HPSTR theme](http://github.com/mmistakes/hpstr-jekyll-the
 ## HPSTR Features:
 
 * Responsive templates for post, page, and post index `layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
+* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
 * Sweet animated menu.
 * Background image support.
 * Support for large images to call out your favorite posts.
@@ -18,15 +18,21 @@ This is a port of the [HPSTR theme](http://github.com/mmistakes/hpstr-jekyll-the
 * Custom 404 page to get you started.
 * Syntax highlighting stylesheets to make your code examples look snazzy.
 
+## Additional Features
+
+* `gulp` powered asset generation
+* Shortcodes for image processing and alerts
+* Read more section under each post
+
 ## Get the theme
 With Git installed, run the following commands inside the Hugo site folder. If Hugo has not yet been installed, read the setup guide [here](https://gohugo.io/overview/installing/).
 
 ```
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/dldx/hpstr-hugo-theme.git hpstr
+$ git clone https://github.com/mauricius/hpstr-hugo-theme.git hpstr
 ```
 
-You can get a zip of the latest version of the theme from the [home page](https://github.com/dldx/hpstr-hugo-theme) and extract it to the themes folder.
+You can get a zip of the latest version of the theme from the [home page](https://github.com/mauricius/hpstr-hugo-theme) and extract it to the themes folder.
 
 [More info](https://dldx.github.io/hpstr-hugo-theme/theme-setup/)
