@@ -146,6 +146,7 @@ td > code {
 pre {
 
 	@include font-rem(12);
+    color: white;
 	line-height: 1.5;
 	overflow-x: auto;
 
