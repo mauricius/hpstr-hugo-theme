@@ -18,13 +18,5 @@
     "url": "https://github.com/mauricius/hpstr-hugo-theme/issues"
   },
   "homepage": "https://github.com/mauricius/hpstr-hugo-theme#readme",
-  "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-noop": "^1.0.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1"
-  }
+  "devDependencies": {}
 }

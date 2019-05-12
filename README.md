@@ -20,7 +20,7 @@ This is a port of the [HPSTR theme](http://github.com/mmistakes/hpstr-jekyll-the
 
 ## Additional Features
 
-* `gulp` powered asset generation
+* [Hugo Pipes](https://gohugo.io/hugo-pipes/) powered asset generation
 * Shortcodes for image processing and alerts
 * Read more section under each post
 
