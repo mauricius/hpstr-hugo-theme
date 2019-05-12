@@ -56,14 +56,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
 <!-- Icons -->
-{{ partial "head/favicon.html" . }}
+{{- partial "head/favicon.html" . -}}
 
-{{ if (isset .Params "prev") }}
+{{- if (isset .Params "prev") -}}
     <link rel="prev" href="{{ .Params.prev }}">
-{{ end }}
-{{ if (isset .Params "next") }}
+{{- end -}}
+{{- if (isset .Params "next") -}}
     <link rel="next" href="{{ .Params.next }}">
-{{ end }}
+{{- end -}}
 
 {{ with $.Param "background" }}
 <style type="text/css">body {background-image:url({{ . }});}</style>
