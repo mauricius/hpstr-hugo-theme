@@ -8,7 +8,7 @@
             <div class="image-credit">Image credit: <a href="{{ $imageparams.creditlink }}">{{ $imageparams.credit }}</a></div>
         {{ end }}
         <div class="entry-image">
-            <img src="{{ $imageparams.feature | relURL }}" alt="{{ .Title }}">
+            <img src="{{ $imageparams.feature | relURL }}" alt="{{ .Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="header-title">

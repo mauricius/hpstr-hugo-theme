@@ -14,7 +14,7 @@
 {{ $image := .Scratch.Get "image" }}
 <figure>
     <a href="{{ $original.RelPermalink }}">
-        <img src="{{ $image.RelPermalink }}" >
+        <img src="{{ $image.RelPermalink }}" loading="lazy">
     </a>
     {{ with .Inner }}
         <figcaption>{{ . }}</figcaption>
