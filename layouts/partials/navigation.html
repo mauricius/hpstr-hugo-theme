@@ -4,7 +4,7 @@
     <ul class="dl-menu">
         <li><a href="{{ "/" | relURL }}">Home</a></li>
         <li>
-            <a href="#">About</a>
+            <a>About</a>
             <ul class="dl-submenu">
             {{ with .Site.Params.author }}
                 <li>
@@ -45,7 +45,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">Posts</a>
+            <a>Posts</a>
             <ul class="dl-submenu">
                 <li><a href="{{ "posts" | absURL }}">All Posts</a></li>
                 <li><a href="{{ "tags" | absURL }}">All Tags</a></li>
