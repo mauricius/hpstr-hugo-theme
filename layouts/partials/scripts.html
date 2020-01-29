@@ -1,31 +1,13 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ "/js/vendor/jquery-1.9.1.min.js" | relURL }}"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.3/jquery.magnific-popup.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.7/dist/alpine.js" defer></script>
 
-{{- $dlmenu := resources.Get "js/plugins/jquery.dlmenu.js" -}}
-{{- $fitvids := resources.Get "js/plugins/jquery.fitvids.js" -}}
 {{- $respond := resources.Get "js/plugins/respond.js" -}}
+{{- $lightbox := resources.Get "js/plugins/fslightbox.js" -}}
 {{- $main := resources.Get "js/_main.js" -}}
 
-{{ $scripts := slice $dlmenu $fitvids $respond $main | resources.Concat "js/main.js" }}
+{{ $scripts := slice $lightbox $respond $main | resources.Concat "js/main.js" }}
 
 {{ if not .Site.IsServer }}
     {{ $scripts = $scripts | resources.Minify | resources.Fingerprint }}
 {{ end}}
 
 <script type="text/javascript" src="{{ $scripts.Permalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
-
-<script>
-    $(window).scroll(function() {
-
-        var filterVal = ($(window).scrollTop() / 40);
-        var filter = 'blur(' + filterVal + 'px)';
-
-        $(".entry-image img")
-            .css('filter',filter)
-            .css('webkitFilter',filter)
-            .css('mozFilter',filter)
-            .css('oFilter',filter)
-            .css('msFilter',filter);
-    });
-</script>

@@ -1,5 +1,7 @@
 {{ partial "head.html" . }}
 <body id="post-index" {{ if isset ($.Scratch.Get "Params") "image" }}class="feature"{{ end }}>
+    {{ `<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->` | safeHTML }}
+
     {{ partial "navigation.html" . }}
     <div class="entry-header">
         {{ if isset ($.Scratch.Get "Params") "image" }}

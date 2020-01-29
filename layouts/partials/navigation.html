@@ -1,11 +1,22 @@
-{{ `<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->` | safeHTML }}
-<nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
-    <button class="dl-trigger">Open Menu</button>
-    <ul class="dl-menu">
+<nav
+    id="dl-menu"
+    class="dl-menuwrapper"
+    x-data="{ open: false, openAbout: false, openPosts: false }"
+    x-bind:class="{ 'dl-menuopen': open }"
+    role="navigation"
+>
+    <button class="dl-trigger" x-bind:class="{'dl-active': open}" @click.stop="open = !open">Open Menu</button>
+
+    <ul
+        class="dl-menu"
+        x-on:click.away="open = false; openAbout = false; openPosts = false"
+        x-bind:class="{ 'dl-menuopen dl-menu-toggle': open, 'dl-subview': openAbout || openPosts, 'dl-animate-in': open && !openAbout && !openPosts}"
+    >
         <li><a href="{{ "/" | relURL }}">Home</a></li>
-        <li>
-            <a>About</a>
+        <li x-bind:class="{'dl-subviewopen': openAbout}">
+            <a @click.stop="openAbout = true">About</a>
             <ul class="dl-submenu">
+                <li class="dl-back"><a href="#" @click.prevent="openAbout = false">back</a></li>
             {{ with .Site.Params.author }}
                 <li>
                     {{ if isset . "avatar" }}
@@ -44,9 +55,10 @@
             {{ end }}
             </ul>
         </li>
-        <li>
-            <a>Posts</a>
+        <li x-bind:class="{'dl-subviewopen': openPosts}">
+            <a @click.stop="openPosts = true">Posts</a>
             <ul class="dl-submenu">
+                 <li class="dl-back"><a href="#" @click.prevent="openPosts = false">back</a></li>
                 <li><a href="{{ "posts" | absURL }}">All Posts</a></li>
                 <li><a href="{{ "tags" | absURL }}">All Tags</a></li>
             </ul>
