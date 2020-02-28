@@ -24,6 +24,10 @@
     {{ $imageparams := index ($.Scratch.Get "Params") "image" }}
     <meta property="og:image" content="{{ $imageparams.feature | absURL }}" />
 {{- end }}
-{{ if not .Date.IsZero -}}
-  <meta property="og:updated_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
-{{- end }}
+{{- if not .Date.IsZero -}}
+    {{- if ne .Lastmod .Date }}
+        <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
+    {{ else }}
+        <meta property="og:updated_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
+    {{- end -}}
+{{- end -}}
