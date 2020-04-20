@@ -1,7 +1,7 @@
 {{ with .Site.Params.author }}
     {{ if isset . "avatar" }}
     <div class="logo-header">
-        <a class="blog-logo" href="{{ .Site.BaseURL }}" style="background-image: url('{{ .avatar }}')" alt="{{ .name }}" title="{{ .name }}">{{ .name }}</a>
+        <a class="blog-logo" href="{{ $.Site.BaseURL }}" style="background-image: url('{{ .avatar }}')" alt="{{ .name }}" title="{{ .name }}">{{ .name }}</a>
     </div>
     {{ end }}
 {{ end }}
