@@ -7,7 +7,7 @@ tags = ["responsive", "blog"]
 features = ["comments", "scss", "menu"]
 
 [author]
-  name = "Maurizio Bonani
+  name = "Maurizio Bonani"
   homepage = ""
 
 # If porting an existing theme
