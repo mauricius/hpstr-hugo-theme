@@ -168,3 +168,32 @@ table {
 table th, table td {
     border-bottom: 1px solid #CCC;
 }
+
+.entry-content {
+
+    .anchor {
+        float: left;
+        padding-right: 4px;
+        margin-left: -20px;
+        line-height: 1.4;
+
+        .anchor-link {
+            vertical-align: middle;
+            visibility: hidden;
+        }
+
+        &:focus .anchor-link {
+            visibility: visible;
+        }
+    }
+
+    h1:hover .anchor .anchor-link,
+    h2:hover .anchor .anchor-link,
+    h3:hover .anchor .anchor-link,
+    h4:hover .anchor .anchor-link,
+    h5:hover .anchor .anchor-link,
+    h6:hover .anchor .anchor-link {
+        visibility: visible;
+    }
+
+}
